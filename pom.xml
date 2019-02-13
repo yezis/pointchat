@@ -12,6 +12,7 @@
     <modules>
         <module>pointchat-server</module>
         <module>pointchat-client</module>
+        <module>common</module>
     </modules>
 
 </project>
