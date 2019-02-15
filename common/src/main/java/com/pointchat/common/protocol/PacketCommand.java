@@ -1,4 +1,4 @@
-package com.pointchat.common.protocol.packet;
+package com.pointchat.common.protocol;
 
 public interface PacketCommand {
 

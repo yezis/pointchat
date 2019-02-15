@@ -1,13 +1,16 @@
-package com.pointchat.common.protocol;
+package com.pointchat.common.codec;
 
-import com.pointchat.common.protocol.packet.AuthRequestPacket;
-import com.pointchat.common.protocol.packet.AuthResponsePacket;
-import com.pointchat.common.protocol.packet.Packet;
+import com.pointchat.common.serialize.JsonSerializer;
+import com.pointchat.common.serialize.Serializer;
+import com.pointchat.common.serialize.SerializerAlgorithm;
+import com.pointchat.common.protocol.AuthRequestPacket;
+import com.pointchat.common.protocol.AuthResponsePacket;
+import com.pointchat.common.protocol.Packet;
 import io.netty.buffer.ByteBuf;
 
 import java.util.HashMap;
 import java.util.Map;
-import static com.pointchat.common.protocol.packet.PacketCommand.*;
+import static com.pointchat.common.protocol.PacketCommand.*;
 
 /**
  * packet 解码器

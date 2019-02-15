@@ -1,4 +1,4 @@
-package com.pointchat.common.protocol;
+package com.pointchat.common.serialize;
 
 import com.alibaba.fastjson.JSON;
 
