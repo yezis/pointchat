@@ -41,11 +41,11 @@ public class PointChatServerApplication implements CommandLineRunner {
                      .childHandler(new ChannelInitializer<ServerSocketChannel>() {
                         @Override
                         protected void initChannel(ServerSocketChannel serverSocketChannel) {
-                                serverSocketChannel.pipeline().addLast(new PacketDecodeHandler());
+                            serverSocketChannel.pipeline().addLast(new PacketDecodeHandler());
 
-                                serverSocketChannel.pipeline().addLast(new PacketEncodeHandler());
-                            }
-                        });
+                            serverSocketChannel.pipeline().addLast(new PacketEncodeHandler());
+                        }
+                     });
 
             // 绑定端口，启动服务器
             int port = baseProperties.getPort();

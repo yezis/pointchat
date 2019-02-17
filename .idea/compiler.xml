@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="example" />
         <module name="pointchat-client" />
         <module name="pointchat-server" />
       </profile>
