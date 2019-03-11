@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>pointchat-server</module>
+        <module>pointchat-gate</module>
         <module>pointchat-client</module>
+        <module>pointchat-logic</module>
         <module>common</module>
-        <module>example</module>
         <module>example</module>
     </modules>
 

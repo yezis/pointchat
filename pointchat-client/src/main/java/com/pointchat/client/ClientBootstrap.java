@@ -2,7 +2,9 @@ package com.pointchat.client;
 
 import com.pointchat.common.codec.PacketDecodeHandler;
 import com.pointchat.common.codec.PacketEncodeHandler;
+import com.pointchat.controller.SendMessage;
 import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -15,10 +17,6 @@ public class ClientBootstrap {
 
     private int port;
 
-    public ClientBootstrap(String host){
-        this.host = host;
-    }
-
     public ClientBootstrap(String host, int port){
         this.host = host;
         this.port = port;
@@ -29,6 +27,9 @@ public class ClientBootstrap {
         bootstrap.connect(host, port).addListener(f -> {
             if(f.isSuccess()){
                 callBack.isSuccess();
+
+                SendMessage.sendAuth(((ChannelFuture)f).channel());
+
             } else {
                 callBack.isFail();
             }

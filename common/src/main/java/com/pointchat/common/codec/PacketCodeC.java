@@ -35,7 +35,7 @@ public class PacketCodeC {
      * 解码
      *
      * 协议格式：
-     * 魔数(4字节)|版本号(1字节)|序列化算法(1字节)|请求指令(1字节)|唯一码(1字节)|数据长度(4字节)|数据("数据长度"字节)
+     * 魔数(4字节)|版本号(1字节)|序列化算法(1字节)|请求指令(1字节)|数据长度(4字节)|数据("数据长度"字节)
      *
      * @param byteBuf
      * @return
@@ -53,9 +53,6 @@ public class PacketCodeC {
 
         // 请求指令
         byte command = byteBuf.readByte();
-
-        // 唯一码
-        byte nonce = byteBuf.readByte();
 
         // 数据包长度
         int length = byteBuf.readInt();

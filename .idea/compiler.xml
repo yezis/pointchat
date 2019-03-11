@@ -9,13 +9,25 @@
         <module name="common" />
         <module name="example" />
         <module name="pointchat-client" />
-        <module name="pointchat-server" />
+        <module name="pointchat-gate" />
+        <module name="pointchat-logics" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.7" />
+      <module name="example" target="1.7" />
+      <module name="pointchat" target="1.5" />
+      <module name="pointchat-client" target="8" />
+      <module name="pointchat-gate" target="1.8" />
+      <module name="pointchat-logic" target="1.5" />
+      <module name="pointchat-logics" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="pointchat-server" options="-parameters" />
+      <module name="pointchat-gate" options="-parameters" />
+      <module name="pointchat-logic" options="-parameters" />
+      <module name="pointchat-logics" options="-parameters" />
     </option>
   </component>
 </project>

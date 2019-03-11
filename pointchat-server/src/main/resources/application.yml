@@ -1,8 +1,0 @@
-baseproperties:
-  port: 8808
-
-spring:
-  output:
-    ansi:
-      enabled:
-        ALWAYS
