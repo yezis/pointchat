@@ -1,15 +1,22 @@
 package com.pointchat.example.client;
 
-import com.pointchat.client.ClientBootstrapCallBack;
+import com.pointchat.client.ClientBootstrapConnectResult;
+import com.pointchat.client.SendMessage;
+import io.netty.channel.Channel;
 
-public class StartResult implements ClientBootstrapCallBack {
+public class StartResult implements ClientBootstrapConnectResult {
+
     @Override
-    public void isSuccess() {
+    public void connectSuccess(Channel channel) {
         System.out.println("客户端启动成功");
+        // 启动后，进行身份验证请求
+        SendMessage.authRequest(channel, "test", "123456");
     }
 
     @Override
-    public void isFail() {
+    public void connectFail() {
         System.out.println("客户端启动失败");
+        // 启动失败，进行重连尝试
+
     }
 }

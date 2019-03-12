@@ -1,11 +1,9 @@
 package com.pointchat.common.codec;
 
+import com.pointchat.common.protocol.*;
 import com.pointchat.common.serialize.JsonSerializer;
 import com.pointchat.common.serialize.Serializer;
 import com.pointchat.common.serialize.SerializerAlgorithm;
-import com.pointchat.common.protocol.AuthRequestPacket;
-import com.pointchat.common.protocol.AuthResponsePacket;
-import com.pointchat.common.protocol.Packet;
 import io.netty.buffer.ByteBuf;
 
 import java.util.HashMap;
@@ -26,6 +24,8 @@ public class PacketCodeC {
     static {
         packetType.put(AUTH_REQUEST, AuthRequestPacket.class);
         packetType.put(AUTH_RESPONSE, AuthResponsePacket.class);
+        packetType.put(MESSAGE_REQUEST, MessageRequestPacket.class);
+        packetType.put(MESSAGE_RESPONSE, MessageResponsePacket.class);
     }
 
     private PacketCodeC(){

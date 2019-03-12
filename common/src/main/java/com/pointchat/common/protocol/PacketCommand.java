@@ -12,4 +12,14 @@ public interface PacketCommand {
      */
     Byte AUTH_RESPONSE = 2;
 
+    /**
+     * 消息发送 {@link MessageRequestPacket}
+     */
+    Byte MESSAGE_REQUEST = 3;
+
+    /**
+     * 消息接收 {@link MessageResponsePacket}
+     */
+    Byte MESSAGE_RESPONSE = 4;
+
 }
