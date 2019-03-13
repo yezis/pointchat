@@ -3,14 +3,14 @@ package com.pointchat.common.protocol;
 public interface PacketCommand {
 
     /**
-     * 身份验证请求 {@link AuthRequestPacket}
+     * 身份验证请求 {@link RegisterRequestPacket}
      */
-    Byte AUTH_REQUEST = 1;
+    Byte REGISTER_REQUEST = 1;
 
     /**
-     * 身份验证响应 {@link AuthResponsePacket}
+     * 身份验证响应 {@link RegisterResponsePacket}
      */
-    Byte AUTH_RESPONSE = 2;
+    Byte REGISTER_RESPONSE = 2;
 
     /**
      * 消息发送 {@link MessageRequestPacket}

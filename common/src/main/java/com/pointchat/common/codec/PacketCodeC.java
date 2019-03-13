@@ -22,8 +22,8 @@ public class PacketCodeC {
     private static final Map<Byte, Class<? extends Packet>> packetType = new HashMap<>();
 
     static {
-        packetType.put(AUTH_REQUEST, AuthRequestPacket.class);
-        packetType.put(AUTH_RESPONSE, AuthResponsePacket.class);
+        packetType.put(REGISTER_REQUEST, RegisterRequestPacket.class);
+        packetType.put(REGISTER_RESPONSE, RegisterResponsePacket.class);
         packetType.put(MESSAGE_REQUEST, MessageRequestPacket.class);
         packetType.put(MESSAGE_RESPONSE, MessageResponsePacket.class);
     }

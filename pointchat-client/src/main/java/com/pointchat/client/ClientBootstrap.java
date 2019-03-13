@@ -1,6 +1,6 @@
 package com.pointchat.client;
 
-import com.pointchat.client.handler.AuthResponseChannelHandler;
+import com.pointchat.client.handler.RegisterResponseHandler;
 import com.pointchat.client.handler.MessageResponseChannelHandler;
 import com.pointchat.common.codec.PacketDecodeHandler;
 import com.pointchat.common.codec.PacketEncodeHandler;
@@ -49,7 +49,7 @@ public class ClientBootstrap {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
                         ch.pipeline().addLast(new PacketDecodeHandler());
-                        ch.pipeline().addLast(new AuthResponseChannelHandler(messageNotfiy));
+                        ch.pipeline().addLast(new RegisterResponseHandler(messageNotfiy));
                         ch.pipeline().addLast(new MessageResponseChannelHandler(messageNotfiy));
                         ch.pipeline().addLast(new PacketEncodeHandler());
                     }

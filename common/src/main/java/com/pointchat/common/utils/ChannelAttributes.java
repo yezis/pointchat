@@ -6,4 +6,6 @@ public interface ChannelAttributes {
 
     AttributeKey<Boolean> LOGINED = AttributeKey.newInstance("logined");
 
+    AttributeKey<Session> SESSION = AttributeKey.newInstance("session");
+
 }

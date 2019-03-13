@@ -8,9 +8,8 @@ public class StartResult implements ClientBootstrapConnectResult {
 
     @Override
     public void connectSuccess(Channel channel) {
-        System.out.println("客户端启动成功");
         // 启动后，进行身份验证请求
-        SendMessage.authRequest(channel, "test", "123456");
+        SendMessage.authRequest(channel, "nick","test", "123456");
     }
 
     @Override

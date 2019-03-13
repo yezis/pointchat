@@ -3,7 +3,7 @@ package com.pointchat.server;
 import com.pointchat.common.codec.PacketDecodeHandler;
 import com.pointchat.common.codec.PacketEncodeHandler;
 import com.pointchat.server.config.BaseProperties;
-import com.pointchat.server.handler.AuthChannelHandler;
+import com.pointchat.server.handler.RegisterHandler;
 import com.pointchat.server.handler.MessageChannelHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -44,7 +44,7 @@ public class PointChatServerApplication implements CommandLineRunner {
                          @Override
                          protected void initChannel(NioSocketChannel ch) {
                              ch.pipeline().addLast(new PacketDecodeHandler());
-                             ch.pipeline().addLast(new AuthChannelHandler());
+                             ch.pipeline().addLast(new RegisterHandler());
                              ch.pipeline().addLast(new MessageChannelHandler());
                              ch.pipeline().addLast(new PacketEncodeHandler());
                          }

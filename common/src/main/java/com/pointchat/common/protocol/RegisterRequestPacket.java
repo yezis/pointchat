@@ -6,7 +6,9 @@ import lombok.Data;
  * 身份验证请求数据包
  */
 @Data
-public class AuthRequestPacket extends Packet {
+public class RegisterRequestPacket extends Packet {
+
+    private String nickName;
 
     private String username;
 
@@ -14,7 +16,7 @@ public class AuthRequestPacket extends Packet {
 
     @Override
     public Byte getCommand() {
-        return PacketCommand.AUTH_REQUEST;
+        return PacketCommand.REGISTER_REQUEST;
     }
 
 }

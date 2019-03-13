@@ -3,7 +3,7 @@ package com.pointchat.common.utils;
 import io.netty.channel.Channel;
 import io.netty.util.Attribute;
 
-public class LoginedUtil {
+public class LoginUtil {
 
     public static void markLogined(Channel channel){
         channel.attr(ChannelAttributes.LOGINED).set(true);

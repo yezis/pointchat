@@ -15,7 +15,6 @@ public class MessageResponseChannelHandler extends SimpleChannelInboundHandler<M
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageResponsePacket packet) {
-        System.out.println("客户端接收到服务端消息");
         messageNotfiy.messageResponse(packet, ctx);
     }
 
